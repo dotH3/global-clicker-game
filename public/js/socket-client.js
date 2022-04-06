@@ -25,6 +25,6 @@ socket.on('addPoint',(el)=>{
 
 window.onload=()=>{
     addBtn.addEventListener('click',()=>{
-        socket.emit('addPoint')
+        socket.emit('addPoint',"null")
     })
 }

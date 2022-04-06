@@ -12,7 +12,7 @@ const socketController = (socket,io)=>{
             console.log('[USERS] : '+users)
         })
 
-        socket.on('addPoint',()=>{
+        socket.on('addPoint',(el)=>{
             points++;
             socket.emit('addPoint',points);
         })
