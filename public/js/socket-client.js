@@ -25,9 +25,6 @@ socket.on('addPoint',(el)=>{
 
 window.onload=()=>{
     addBtn.addEventListener('click',()=>{
-        socket.emit('addPoint',"null")
-    })
-    socket.on('addPoint',(el)=>{
-        pointScore.innerText=el
+        socket.emit('addPoint')
     })
 }
