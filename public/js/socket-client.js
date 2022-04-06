@@ -18,9 +18,10 @@ socket.on('disconnect',()=>{
 socket.on('usersCount',(el)=>{
     usersCount.innerText=el
 });
-socket.on('addPointServer',(el)=>{
-    pointScore.innerText=el
+socket.on('addPoint',(el)=>{
+    pointScore.innerText="AAA"
 })
+
 
 window.onload=()=>{
     addBtn.addEventListener('click',()=>{

@@ -14,11 +14,11 @@ const socketController = (socket,io)=>{
 
         socket.on('addPoint',()=>{
             points++;
-            socket.emit('addPointServer',points);
+            socket.emit('addPoint',points);
         })
 
         io.emit('usersCount',users);
-        socket.emit('addPointServer',points);
+        socket.emit('addPoint',points);
         console.log('[USERS] : '+users)
     
 }
