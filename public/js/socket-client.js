@@ -19,7 +19,7 @@ socket.on('usersCount',(el)=>{
     usersCount.innerText=el
 });
 socket.on('addPoint',(el)=>{
-    pointScore.innerText="AAA"
+    pointScore.innerText=el
 })
 
 
