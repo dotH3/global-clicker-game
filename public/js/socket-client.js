@@ -18,9 +18,12 @@ socket.on('disconnect',()=>{
 socket.on('usersCount',(el)=>{
     usersCount.innerText=el
 });
-socket.on('addPoint',(el)=>{
-    pointScore.innerText=el
+
+
+socket.on('update-points',(el)=>{
+    pointScore.innerText=el;
 })
+
 
 
 window.onload=()=>{
