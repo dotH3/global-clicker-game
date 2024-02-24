@@ -19,7 +19,7 @@ const { socketController } = require('./sockets/controller');
             io.on('connection',(socket)=>socketController(socket,io))
         }
         socket()
-        app.use(index,express.static('public'))
+        app.use(express.static('public'))
         server.listen(port,()=>{
-                 console.log(`SERVER ON: http://localhost:${port}/${index}`);
+                 console.log(`SERVER ON: http://localhost:${port}/`);
          });
