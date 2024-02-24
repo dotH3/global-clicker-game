@@ -4,7 +4,7 @@ var cors = require('cors');
 const { socketController } = require('./sockets/controller');
 
         const app = express();
-        const port= process.env.PORT;
+        const port= process.env.PORT || 3000;
         const server = require('http').createServer(app);
         const io = require('socket.io')(server)
         //Conexion a la base de datos
