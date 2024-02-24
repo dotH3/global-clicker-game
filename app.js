@@ -5,6 +5,7 @@ const { socketController } = require('./sockets/controller');
 
         const app = express();
         const port= process.env.PORT || 3000;
+        const index = procces.env.INDEX || "clicker-game/"
         const server = require('http').createServer(app);
         const io = require('socket.io')(server)
         //Conexion a la base de datos
@@ -18,7 +19,7 @@ const { socketController } = require('./sockets/controller');
             io.on('connection',(socket)=>socketController(socket,io))
         }
         socket()
-        app.use(express.static('public'))
+        app.use(index,express.static('public'))
         server.listen(port,()=>{
-                 console.log(`SERVER ON: http://localhost:${port}/`);
+                 console.log(`SERVER ON: http://localhost:${port}/${index}`);
          });
